@@ -10,5 +10,7 @@
   <%= @blog.body %>
 </p>
 
+<% if can? :update, @blog %>
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
+<% end %>
 <%= link_to 'Back', blogs_path %>
